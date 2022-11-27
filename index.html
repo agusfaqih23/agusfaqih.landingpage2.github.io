@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>starbucks website landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#" class="logo"><img src="starbuck-removebg-preview.png"></a>
+            <ul class="info">
+                <li style="--clr: #ff0000;"> 
+                    <a href="#" data-text="&nbsp;Home">&nbsp;Home&nbsp;</a></li>
+                <li style="--clr: #eb7495;">
+                    <a href="#" data-text="&nbsp;Menu">&nbsp;Menu&nbsp;</a></li>
+                <li style="--clr: #2fff1c;">
+                    <a href="#" data-text="&nbsp;About">&nbsp;About&nbsp;</a></li>
+                <li style="--clr: #d752b1;">
+                    <a class="khusus" href="#" data-text="&nbsp;Contact">&nbsp;Contact&nbsp;</a></li>  
+                    
+                <!-- <li><a href="#"><i class="fa-brands"></i>Menu</a></li> 
+                <li><a href="#"><i class="fa-brands"></i>What's new</a></li>
+                <li><a href="#"><i class="fa-brands"></i>Contact</a></li> -->
+        
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just coffee<br>it's <span class="okt"> Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A praesentium quasi ad harum sunt excepturi voluptates deserunt mollitia quod quibusdam ipsum dolorem architecto tempora iste ratione, omnis ipsa, consectetur quisquam.</p>
+                <a class="babik" href="#">
+                    <span >Learn more</span>
+                    <div class="liquid"></div>
+                </a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks"> 
+
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li> <a href="#"><img src="facebook.png"></a></li>
+            <li> <a href="#"><img src="twitter.png"></a></li>
+            <li> <a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        
+        
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color){
+            const okt = document.querySelector('.okt');
+            okt.style.color = color;
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+            const babik = document.querySelector('.babik');
+            babik.style.background = color;
+        }
+    </script>
+</body>
+</html>
